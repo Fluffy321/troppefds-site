@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Enable HTTPS when the certificate is ready
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.PAGES_ADMIN_TOKEN }}
           REPOSITORY: ${{ github.repository }}
         run: |
           current=$(curl --silent --fail-with-body \
